@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Celcius-Fahrenheit Converter</title> 
+</head>
+<body>
+
+    <header>
+        <h1>
+            Celcius-Fahrenheit Converter
+        </h1>
+    </header>
+
+    <section class="welcomeText">
+    <p>
+        Welcome to Celcius-Fahrenheit converter~<br>
+        Type the temperature value, then click "Convert" button to get the result! <br>
+        Please click "Reset" button first before you input the new temperature to convert!
+    </p>
+    </section>
+
+    <section class="celSection"><!--area inputan data suhu dalam celcius-->
+        <label for="celField"><!--kasih label sebelum input box-->
+            Celcius (<sup>o</sup>C):
+        </label>
+        <input type="number" id="celField" placeholder="Type the temperature value in celcius unit" value=""></input>
+        <!--tipe data yang bisa diinputkan hanya angka, kalau "text" baru bisa masukkin huruf-->
+        
+    <div class="InputButtonSection">
+        <!--tambahkan 2 button untuk kalkulasi data dan clear data-->
+        <button id="Convert!">Convert</button>
+        <button id="Reset">Reset</button>
+        </div>
+    
+    <section class="fahSection"><!--area inputan data suhu dalam fahrenheit--> 
+        <label for="fahField">
+            Fahrenheit (<sup>o</sup>F):
+        </label>
+        <input type="number" id="fahField" placeholder="Type the temperature value in fahrenheit unit" value=""></input>
+    
+    <section class="calculationSection"><!--area ouputan cara kalkulasi data-->
+        <label for="calculationField">
+            Calculations:
+        </label>
+        <ouput type="text" id="calculationField" name="calc" value="">
+        </ouput>
+    </section>
+    
+    <section class="epxlanationSection"><!--area informasi rumus-->
+        <label for="ExplanationField">
+            Celcius (<sup>o</sup>C) to fahrenheit (<sup>o</sup>F), and vice versa, can be converted by using these following formulas:
+        </label>
+        <ouput type="text" id="ExplanationField">
+            <!--agar menampilkan rumus dengan tampilan yang baik, saya menggunakan MathJax-->
+            <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+            <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#xb0;</mo><mi>F</mi><mo>=</mo><mo>&#xb0;</mo><mi>C</mi><mo>&#xd7;</mo><mfrac><mn>9</mn><mn>5</mn></mfrac><mo>+</mo><mn>32</mn></math></br>
+            <math xmlns="http://www.w3.org/1998/Math/MathML"><mo>&#xb0;</mo><mi>C</mi><mo>=</mo><mfenced><mrow><mo>&#xb0;</mo><mi>F</mi><mo>-</mo><mn>32</mn></mrow></mfenced><mo>&#xd7;</mo><mfrac><mn>5</mn><mn>9</mn></mfrac></math>
+        </ouput>
+    </section>
+
+    <footer>This mini project belongs to Sekar Kinanti Nugraheni to fulfill one of the assignments for accepting an attendance certificate of </br>
+        the Software Engineering Fundamental Course by RevoU
+    </footer>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>

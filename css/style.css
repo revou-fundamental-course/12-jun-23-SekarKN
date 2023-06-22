@@ -1,0 +1,170 @@
+/* MARK: default */
+body{
+    /*buat semua jenis tampilan yang ada di body*/
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-image: url('https://i.ibb.co/QHsv1dc/temperature-converter.jpg'); /*load image sebagai background*/
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    background-color: #884A39; /*warna background header*/
+    color: white; /*warna tulisan header*/
+    text-align: center ; /*posisi tulisan di tengah*/
+    /*posisikan header agar tidak terlalu mepet kanan kiri, setting margin*/
+    margin-left: 105px;
+    margin-right: 105px;
+    margin-bottom: 1px;
+    margin-top: 1px;
+    /*setting corner radius agar background header sudutnya jadi membundar*/
+    border-radius: 10px;
+}
+
+label{
+    /*beri margin antara label dengan input boxnya*/
+    margin-top: 1px;
+    margin-bottom: 5px; 
+    margin-left: 105px;
+    font-size: 18px; /*ukuran font labelnya*/
+    font-weight: bold; /*beri efek bold pada font label untuk mempertegas*/
+    color: #25130e; /*samakan warna labelnya seperti saat input box diberi focus oleh kursor*/
+}
+
+button {
+    background-color: #884A39; /*mengganti warna bg button*/
+    color: white; /*mengganti warna font button*/ 
+    font-size: 18px;
+    font-weight: bold; /*beri efek bold pada font label untuk mempertegas*/
+    padding: 5px 20px; /*agar text dalam button presisi*/
+    margin-top: 5px; /*beri margin antara input box dan buttonnya*/
+    margin-bottom: 5px; /*beri margin antara label dengan input boxnya*/
+    margin-left: 15px; /*beri margin di sebelah kiri button agar tidak mepet dengan button di sebelah kirinya*/
+    margin-right: 2px; /*beri margin di sebelah kanan button agar tidak mepet dengan button di sebelah kananSnya*/
+    border-radius: 5px; /*styling agar sudut buttonnya membundar*/
+    cursor: pointer; /*merubah bentuk kursor menjadi telunjuk click saat kursor diarahkan di area button*/
+    border: none; /*garis dan shadow button jadi hilang agar tidak jadul*/
+}
+
+button:hover{ /*pseudo element yang memberikan efek pada button ketika dikenai oleh kursor*/
+    background-color: #723f30; /*ketika kursor diarahkan ke button maka button akan menggelap warnanya*/
+}
+
+button:active{ /*pseudo yang memberikan efek pada button ketika diclick oleh kursor*/
+    transform: translateY(1px); /*jika diclick maka button akan bounce ke bawah*/
+    background-color: #5a3428; /*ketika button diclick, maka warna buttonnya akan lebih gelap lagi dibanding kursornya hanya diarahkan saja*/
+}
+
+footer{
+    background-color: #884A39; /*warna background header*/
+    color: white; /*warna tulisan header*/
+    font-size: 15px;
+    text-align: center ; /*posisi tulisan di tengah*/
+    /*posisikan header agar tidak terlalu mepet kanan kiri, setting margin*/
+    margin-top: 20px;
+    margin-left: 100px;
+    margin-right: 100px;
+    /*setting corner radius agar background header sudutnya jadi membundar*/
+    border-radius: 5px;
+}
+
+/* MARK: ID atau for */
+#celField{
+    outline: none; /*garis luar input boxnya dimatikan*/
+    background-color: whitesmoke;
+    font-size: 18px; /*ukuran font untuk angka yang diinputkan*/
+    border-radius: 8px; /*biar sudut input boxnya jadi melengkung dan kekinian*/
+    border: solid #be8777; /*ganti warna border*/
+    height: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px; /*setting margin atas-bawah dan kanan-kirinya text di dalam input box*/
+}
+
+#celField:focus {/*":focus", membuat pseudo element agar tampilan berbeda saat kursor sedang fokus ngeclick atau ngedit input di area inputFied*/
+    border: solid #794c3e;
+}
+
+#fahField{
+    outline: none;
+    background-color: whitesmoke;
+    font-size: 18px; 
+    border-radius: 8px; 
+    border: solid #be8777;
+    height: 18px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px; 
+    
+}
+
+#fahField:focus {/*":focus", membuat pseudo element agar tampilan berbeda saat kursor sedang fokus ngeclick atau ngedit input di area inputFied*/
+    border: solid #794c3e;
+}
+
+#calculationField{
+    outline: none; 
+    color: rgb(133, 33, 0);
+    background-color: whitesmoke;
+    font-size: 18px; 
+    font-weight: bold;
+    border-radius: 8px; 
+    border: solid #be8777; 
+    height: 25px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px; 
+}
+
+#ExplanationField{
+    outline: none; 
+    background-color: whitesmoke;
+    font-size: 18px; 
+    border-radius: 8px; 
+    border: solid #be8777; 
+    height: 55px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 100px;
+    margin-right: 100px;
+    padding: 10px; 
+}
+/* MARK: class */
+.welcomeText{
+    background-color: none;
+    margin-left: 105px;
+    text-align:left;
+    font-weight:normal;
+    font-size: 17px;
+}
+
+.celSection{
+    display: flex; 
+    flex-direction: column; /*biar label dan input boxnya atas bawah seperti kolom*/
+}
+
+.InputButtonSection {
+    display: flex; 
+    flex-direction: row;
+    align-self: center;
+}
+
+.fahSection{
+    display: flex; 
+    flex-direction: column; 
+}
+
+.calculationSection{
+    display: flex; 
+    flex-direction: column; 
+}
+
+.epxlanationSection{
+    display: flex; 
+    flex-direction: column; 
+}
